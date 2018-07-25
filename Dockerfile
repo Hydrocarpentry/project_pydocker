@@ -5,6 +5,7 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y python-pandas
 ###by default it is python 2.7###
 RUN apt-get install -y r-base
+RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
 RUN Rscript -e "install.packages(‘caret’)”
 RUN Rscript -e "install.packages(‘randomForest’)”
 
