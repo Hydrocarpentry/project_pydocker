@@ -5,10 +5,11 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y python-pandas
 ###by default it is python 2.7###
 RUN apt-get install -y r-base
-#RUN pip install panda
-#RUN pip install msgpack
+RUN Rscript -e "install.packages(‘caret’)”
+RUN Rscript -e "install.packages(‘randomForest’)”
 
-ADD STORM_data_flooded_streets_2010-2016.csv hampt_rd_data.sqlite prepare_flood_events_table.py make_dly_obs_table_standalone.py by_event_for_model.py install.r model_flood_counts_rf_ps_cln.r plot_count_model_results.py test.sh /
+
+ADD STORM_data_flooded_streets_2010-2016.csv hampt_rd_data.sqlite prepare_flood_events_table.py make_dly_obs_table_standalone.py by_event_for_model.py model_flood_counts_rf_ps_cln.r plot_count_model_results.py test.sh /
 
 ####those scripts with data and test.sh contains bash file with input data files#
 
