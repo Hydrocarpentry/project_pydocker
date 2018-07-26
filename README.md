@@ -11,4 +11,5 @@ Hydroshare website and Github repository.
 ```STORM_data_flooded_streets_2010-2016.csv; hampt_rd_data.sqlite```
   - Download the data "Raw street flood report data from Norfolk,VA 2010-2016" from the [GitHub repository](https://github.com/Hydrocarpentry/reproduced_data/blob/master/STORM_data_flooded_streets_2010-2016.csv). 
   - Download the data "Hamton Roads Enfironmental Time Series Data" from Hydroshare repository or from [OSF source](https://osf.io/mr7jx/?action=download)
--- The Docker image can be built using the above input files.
+
+-- The Docker recipe file contains all the commands to use the above input script files and download input data, for building a container.
