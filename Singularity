@@ -5,7 +5,9 @@ From: ubuntu
     apt-get update
     apt-get install -y python-pandas
     apt-get install -y r-base
-    
+    apt-get install wget
+    wget -O /hampt_rd_data.sqlite https://osf.io/mr7jx/?action=download  
+    wget -O https://github.com/Hydrocarpentry/reproduced_data/blob/master/STORM_data_flooded_streets_2010-2016.csv    
     # Install required R packages
     R --slave -e 'install.packages("caret")'
     R --slave -e 'install.packages("randomForest")'
